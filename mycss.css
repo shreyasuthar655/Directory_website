@@ -1,0 +1,29 @@
+body
+{
+    background-color: #9eeaf9;
+    
+}
+.logo
+{
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+.location
+{
+    position:absolute;
+    left: 30%;
+    top: 5%;
+    width: 20%;
+    box-shadow: 2px 2px 2px 2px rgb(2, 82, 108);
+}
+.search
+{
+    position:absolute;
+    left: 60%;
+    top: 5%;
+    width: 30%;    
+    box-shadow: 2px 2px 2px 2px rgb(2, 82, 108);
+    /* box-sizing:; */
+}
+
