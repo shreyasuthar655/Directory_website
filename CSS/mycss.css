@@ -65,7 +65,7 @@ input{
   top: 25%;
   box-sizing: content-box;
 } 
-.form-control:hover
+.form-control:hover,.form-select:hover
 {
   background-color: #cff4fc;
 }
@@ -141,12 +141,14 @@ input{
     font-weight: bold;
     text-align: center;
     /* font-family: Poppins; */
-    background-color: #9eeaf9;
+    background-color: white;
     width: 200px;
     height: 50px;
-    box-shadow: 5px 5px 5px #9eeaf9;
+    box-shadow: 5px 5px 50px rgb(48, 44, 44);
+    /* box-shadow: 5px 5px 5px #9eeaf9; */
     z-index: 99;
     position: absolute;
+    border-radius: 10px;
   }
 #sort1
 {
@@ -163,6 +165,9 @@ input{
   position: absolute;
   left: 60%;
 }
+/* .sort{
+
+} */
 
 /* .container{
     margin-top: 150px;
