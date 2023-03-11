@@ -113,15 +113,24 @@ input{
   }
   figcaption
   {
+<<<<<<< HEAD
     position: relative;
     top: -5px;
+=======
+>>>>>>> 8e447bde9233ad1d4e11d6f73abf72b3f6de435d
     font-size: large;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
+<<<<<<< HEAD
     /* font-family: Poppins; */
     /* margin-top:3px; */
     color:#005a6c;
     line-height: initial;
+=======
+    font-family: Poppins;
+    color:#005a6c;
+    margin-top: -30px;
+>>>>>>> 8e447bde9233ad1d4e11d6f73abf72b3f6de435d
   }
   h2,h3
   {
