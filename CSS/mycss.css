@@ -111,11 +111,13 @@ input{
   }
   figcaption
   {
+    position: relative;
+    top: 2px;
     font-size: large;
     font-weight: 500;
     text-align: center;
     font-family: Poppins;
-    margin-top:10px;
+    /* margin-top:3px; */
     color:#005a6c;
   }
   h2,h3
