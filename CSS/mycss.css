@@ -8,6 +8,9 @@ body
     height: 1000px;
     font-family: 'Poppins';
 }
+img{
+  border-radius: 10px;
+}
 /* .logo
 {
     // animation: mymove 4s infinite;
@@ -90,7 +93,7 @@ input{
     /* background-color: #0aa2c0 ; */
   }
   .flex-container > div {
-    background-color: #f1f1f1;
+    /* background-co lor: #f1f1f1; */
     width: 100px;
     height: 100px;
     margin: 10px;
@@ -101,6 +104,9 @@ input{
   }
   .category
   {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
     transition: transform .2s; /* Animation */
     box-shadow: 5px 5px 50px rgb(48, 44, 44);
     /* box-shadow: 0px 8px 8px 0px rgba(29, 63, 63, 0.2), 0px 8px 8px 0px rgba(29, 63, 63, 0.2) */
@@ -117,9 +123,9 @@ input{
     font-family: Poppins;
     color:#005a6c;
     margin-top: -30px;
+    line-height: initial;
   }
-  h2,h3
-  {
+  h2,h3  {
     color: white;
     text-align: center;
     font-family: Poppins;
