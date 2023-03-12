@@ -201,3 +201,9 @@ h3 {
 a {
   text-decoration: none;
 }
+
+.automobile
+{
+  position: relative;
+  left: -9.5%;
+}
