@@ -49,23 +49,23 @@ img {
 }
 
 #location {
-  position: absolute;
-  left: 30%;
-  top: 25%;
+  position: relative;
+  left: 20%;
+  /* top: 100%; */
   box-sizing: content-box;
 }
 
 input {
   padding: 10px;
   width: 300px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 2px solid #09b4d6;
 }
 
 #search {
-  position: absolute;
-  left: 60%;
-  top: 25%;
+  position: relative;
+  left: 30%;
+  /* top: 100%; */
   box-sizing: content-box;
 }
 
@@ -90,7 +90,7 @@ input {
   margin-right: 5%;
   height: 180px;
   position: relative;
-  top: 50px;
+  top: 10px;
   display: flex;
   /* flex-direction: column; */
   flex-wrap: nowrap;
@@ -111,7 +111,7 @@ input {
 }
 
 .category{
-  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255); */
   padding: 10px;
   border-radius: 10px;
   transition: transform .2s;
@@ -135,7 +135,7 @@ figcaption {
   font-family: Poppins;
   color: #005a6c;
   /* margin-top: -5px; */
-  width: 120px;
+  width: 100px;
 }
 
 h2,h3 {
@@ -204,7 +204,7 @@ a {
 }
 .choice
 {
-  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255); */
   padding: 10px;
   border-radius: 10px;
   transition: transform .2s;
@@ -234,4 +234,37 @@ a {
   flex-wrap: nowrap;
   justify-content: space-around;
   /* background-color: #0aa2c0 ; */
+}
+
+.navbar{
+  background-color: white;
+  border-radius: 15px;
+  width:40%;
+  position: relative;
+  left:32%;
+  top:-80px;
+}
+.navbar li{
+  float:left;
+  list-style: none;
+  margin:5px;
+  padding: 5px 35px 5px 35px;
+
+}
+.navbar ul{
+  overflow: auto; 
+}
+.navbar li a{
+  text-decoration: none;
+  padding: 5px;
+  color:black;
+
+}
+.navbar input{
+  border: 1.5px solid black;
+  border-radius: 15px;
+  width:120px;
+}
+a:hover{
+  background-color: #cff4fc;
 }
