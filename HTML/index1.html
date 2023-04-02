@@ -11,6 +11,20 @@
   <link href="https://fonts.google.com/specimen/Poppins?query=poppins">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="../CSS/mycss.css">
+
+  <!--javascript -->
+  <script>
+    
+    function checkk()
+    {
+      var l = document.getElementById("Location").value;
+      var i = document.getElementById("Input").value;
+      if(l=="")
+      {
+        alert("Enter location");
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -26,6 +40,7 @@
           </ul>
       </nav>
   </div>
+  <p id = "he"></p>
   <hr style="height: 1px; background-color: #ffffff; width: 100%;">
   <br><br>
   <div class="head2">
@@ -33,14 +48,14 @@
       <!-- <div class="form-group col-md-6"> -->
       <label for="Location"></label>
       <input type="text" class="form-control" id="Location" placeholder="Location">
-      <button type="submit" class="but"><span id="s" class="fa fa-search"></span></button>
+      <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
     </span>
 
     <span class="main" id="search">
       <!-- <div class="form-group col-md-6"> -->
       <label for="Input"></label>
       <input type="text" class="form-control" id="Input" placeholder="Search Here">
-      <button type="submit" class="but"><span id="m" class="fa fa-search"></span></button>
+      <button class="but" onclick="checkk()"><span id="m" class="fa fa-search" ></span></button>
       <!-- </div> -->
     </span>
   </div>
