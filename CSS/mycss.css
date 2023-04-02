@@ -40,6 +40,17 @@ img {
   position: sticky;
   top: 0px;
   z-index: 1;
+  height: 15%;
+}
+.head2 {
+  position: sticky;
+  top: 30%;
+  z-index: 1;
+  /* height: 15%; */
+}
+hr{
+  position: sticky;
+  top:22%;
 }
 
 #logo {
@@ -237,6 +248,7 @@ a {
 
 .navbar{
   background-color: white;
+  /* border-color: #09b4d6; */
   border-radius: 10px;
   width:40%;
   position: relative;
