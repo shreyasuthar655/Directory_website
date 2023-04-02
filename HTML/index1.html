@@ -11,20 +11,8 @@
   <link href="https://fonts.google.com/specimen/Poppins?query=poppins">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="../CSS/mycss.css">
-
-  <!--javascript -->
-  <script>
-    
-    function checkk()
-    {
-      var l = document.getElementById("Location").value;
-      var i = document.getElementById("Input").value;
-      if(l=="")
-      {
-        alert("Enter location");
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="../JavaScript/myjavascript.js"></script>
 </head>
 
 <body>
@@ -32,15 +20,15 @@
     <div class="main" id="logo">
       <img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px">
     </div>
-      <nav class="navbar"  id="h">
-          <ul>
-              <li><a href="#top">Home</a></li>
-              <li><a href="#a">About Us</a></li>
-              <li id="q"><a href="#c">Contact</a></li>
-          </ul>
-      </nav>
+    <nav class="navbar" id="h">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#a">About Us</a></li>
+        <li id="q"><a href="#c">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-  <p id = "he"></p>
+  <p id="he"></p>
   <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
 
   <br><br>
@@ -48,6 +36,7 @@
     <span class="main" id="location">
       <!-- <div class="form-group col-md-6"> -->
       <label for="Location"></label>
+      <!-- <i class="material-icons" style="font-size:36px">place</i> -->
       <input type="text" class="form-control" id="Location" placeholder="Location">
       <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
     </span>
@@ -56,7 +45,7 @@
       <!-- <div class="form-group col-md-6"> -->
       <label for="Input"></label>
       <input type="text" class="form-control" id="Input" placeholder="Search Here">
-      <button class="but" onclick="checkk()"><span id="m" class="fa fa-search" ></span></button>
+      <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
       <!-- </div> -->
     </span>
   </div>
@@ -108,7 +97,9 @@
     <span class="about" id="a">
       <h5>Abous Us:</h5>
       <h6>
-        We are here to help you find the perfect place for your need whether it be a restaurant, hotel or a hospital. You may also find thr best services in your town for plumbing, carpentry, automobiles etc.<br>Established: March 2023<br>Mumbai, India
+        We are here to help you find the perfect place for your need whether it be a restaurant, hotel or a hospital.
+        You may also find thr best services in your town for plumbing, carpentry, automobiles etc.<br>Established: March
+        2023<br>Mumbai, India
       </h6>
     </span>
     <span class="contact" id="c">

@@ -103,7 +103,20 @@ button {
 button:hover {
   background: #cff4fc;
 }
-
+/* i{
+  float: left;
+  width: 3%;
+  
+  padding: 7px;
+  padding-top: -1px;
+  padding-bottom: 14px; 
+  background: white;
+  font-size: 30px;
+  border: 2px solid #09b4d6;
+  border-radius: 10px 0px 0px 10px;
+  border-right:none;
+  margin: -5px;
+} */
 
 /* .search
 {
