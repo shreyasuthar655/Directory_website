@@ -302,3 +302,21 @@ li a:hover{
 /* a:hover{
   /* background-color: #cff4fc; 
 } */
+
+.about{
+  margin-left: 20%;
+  display: inline-block;
+  max-width: 40%;
+  text-align: left;
+  color: #ffffff;
+}
+.contact
+{
+  position: relative;
+  top: -30px;
+  left: 10%;
+  display: inline-block;
+  max-width: 40%;
+  text-align: left;
+  color: #ffffff;
+}
