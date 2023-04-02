@@ -320,3 +320,7 @@ li a:hover{
   text-align: left;
   color: #276c7c;
 }
+
+#s:hover, #m:hover{
+  transform: scale(1.3);
+}
