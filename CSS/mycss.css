@@ -37,21 +37,21 @@ img {
     box-sizing: content-box;
 } */
 .head1 {
-  position: sticky;
+  /* position: sticky; */
   top: 0px;
   z-index: 1;
   height: 15%;
 }
 .head2 {
-  position: sticky;
+  /* position: sticky; */
   top: 30%;
   z-index: 1;
   /* height: 15%; */
 }
-hr{
+/* hr{
   position: sticky;
   top:22%;
-}
+} */
 
 #logo {
   position: relative;
