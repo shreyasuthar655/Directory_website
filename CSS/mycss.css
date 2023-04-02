@@ -266,7 +266,7 @@ a {
 }
 
 .navbar{
-  background-color: white;
+  background-color: #ffffff;
   /* border-color: #09b4d6; */
   border-radius: 10px;
   width:40%;
@@ -289,6 +289,10 @@ a {
   padding: 5px;
   color:black;
 
+}
+
+li a:hover{
+  background-color: #e3eff1;
 }
 .navbar input{
   border: 1.5px solid black;
