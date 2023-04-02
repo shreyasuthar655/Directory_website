@@ -120,7 +120,7 @@ input {
   /* box-shadow: 0px 8px 8px 0px rgba(29, 63, 63, 0.2), 0px 8px 8px 0px rgba(29, 63, 63, 0.2) */
 }
 
-.category:hover,.item:hover,.choice:hover {
+.category:hover,.item:hover,choice:hover {
   transform: scale(1.2);
 }
 
@@ -130,10 +130,9 @@ figcaption {
   text-align: center;
   /* font-family: Poppins; */
   /* margin-top:3px; */
-  color: #005a6c;
+  color: white;
   line-height: initial;
   font-family: Poppins;
-  color: #005a6c;
   /* margin-top: -5px; */
   width: 100px;
 }
@@ -238,7 +237,7 @@ a {
 
 .navbar{
   background-color: white;
-  border-radius: 15px;
+  border-radius: 10px;
   width:40%;
   position: relative;
   left:32%;
