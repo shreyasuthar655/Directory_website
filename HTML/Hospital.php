@@ -1,24 +1,3 @@
-<?php
-//Ways to connect to mysql database
-// 1. MySQLi extension(Procedural and object-oriented) --> only for mysql.
-// 2.PDO(PHP Data Object) --> works with other softwares of database also.
-
-//you'll need 3 variables
-$servername="localhost"; //
-$username="root"; //deafault is root
-$password=""; //blank here, not in server --> xampp is inside your computer so by default password is null.
-$database="mini project";
-//if you write password it will throw error
-
-//create connection
-$conn=mysqli_connect($servername,$username,$password,$database);
-//die if connection was not successful
-if(!$conn)
-{
-    echo '<script>alert("Fail to connect ")</script>';
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,37 +27,47 @@ if(!$conn)
   <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
 
   <br><br>
-  <div class="head2">
-    <span class="main" id="location">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Location"></label>
-      <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-      <input type="text" class="form-control" id="Location" placeholder="Location">
-      <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
-    </span>
+  <form action="" method="post">
+    <div class="head2">
+      <span class="main" id="location">
+        <!-- <div class="form-group col-md-6"> -->
+        <label for="Location"></label>
+        <!-- <i class="material-icons" style="font-size:36px">place</i> -->
+        <input type="text" class="form-control" id="Location" name="location" placeholder="Location" required>
+        <button type="submit" class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
+      </span>
 
-    <span class="main" id="search">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Input"></label>
-      <input type="text" class="form-control" id="Input" placeholder="Search Here" value="Hospital">
-      <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
-      <!-- </div> -->
-    </span>
-  </div>
+      <span class="main" id="search">
+        <!-- <div class="form-group col-md-6"> -->
+        <label for="Input"></label>
+        <input type="text" name="category" class="form-control" id="Input" value="Hospital">
+        <button type="submit" class="but" name="btn" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
+        <!-- </div> -->
+      </span>
+    </div>
+  </form>
   <br><br>
-    <h2>Which type of Hospital would you prefere?</h2>
+  <?php
+    if(isset($_REQUEST['btn']))
+    {
+      $loc = $_REQUEST['location'];
+      ?>
+        <h2>Which type of Hospital would you prefere?</h2>
     <div class="flex-container2">
         <div class="choice">
-          <a href="link.html">
+          <a href="link.php?location=<?php echo $loc; ?>&type=<?php echo "Public"; ?> ">
             <img src="../Images/public.png" height="50px" width="100px">
           </a>
         </div>
         <div class="choice">
-          <a href="../HTML/Private_hospitals.html">
+          <a href="link.php?location=<?php echo $loc; ?>&type=<?php echo "Private"; ?> ">
             <img src="../Images/private.png" height="50px" width="100px">
           </a>
         </div>
-    </div>
+    </div> 
+      <?php
+    }
+  ?>
   </div>
 </body>
 </html>
