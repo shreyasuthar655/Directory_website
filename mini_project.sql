@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2023 at 08:08 AM
+-- Generation Time: Apr 14, 2023 at 11:27 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mini project`
+-- Database: `mini_project`
 --
 
 -- --------------------------------------------------------
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `category` (
-  `Cat_Id` varchar(5) NOT NULL,
+  `cid` int(11) NOT NULL,
   `Cat_Name` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -36,30 +36,11 @@ CREATE TABLE `category` (
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`Cat_Id`, `Cat_Name`) VALUES
-('C1', 'Restaurant'),
-('C2', 'Hotel'),
-('C3', 'Repair'),
-('C4', 'Hospital');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hospital`
---
-
-CREATE TABLE `hospital` (
-  `Hospital_Id` varchar(5) NOT NULL,
-  `Category` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `hospital`
---
-
-INSERT INTO `hospital` (`Hospital_Id`, `Category`) VALUES
-('HOS1', 'Public'),
-('HOS2', 'Private');
+INSERT INTO `category` (`cid`, `Cat_Name`) VALUES
+(1, 'Restaurant'),
+(2, 'Hotel'),
+(3, 'Repair'),
+(4, 'Hospital');
 
 -- --------------------------------------------------------
 
@@ -68,16 +49,65 @@ INSERT INTO `hospital` (`Hospital_Id`, `Category`) VALUES
 --
 
 CREATE TABLE `hospital_details` (
-  `Hos_Id` varchar(5) NOT NULL,
+  `Hos_Id` int(11) NOT NULL,
   `Hos_Name` varchar(30) NOT NULL,
   `Hos_Location` varchar(50) NOT NULL,
   `Hos_Rating` float(2,1) NOT NULL,
   `Hos_Image` varchar(80) NOT NULL,
-  `Hos_Contact` int(10) NOT NULL,
-  `Hos_Description` text NOT NULL,
-  `HosCat_Id` varchar(5) NOT NULL,
-  `PHos_Cat_Id` varchar(5) NOT NULL
+  `category` varchar(255) NOT NULL,
+  `Hos_Contact` text NOT NULL,
+  `Hos_Description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hospital_details`
+--
+
+INSERT INTO `hospital_details` (`Hos_Id`, `Hos_Name`, `Hos_Location`, `Hos_Rating`, `Hos_Image`, `category`, `Hos_Contact`, `Hos_Description`) VALUES
+(1, 'Zydus', 'Anand', 4.5, 'asb.png', 'Public', '9054849782', 'Hello BVm'),
+(2, 'Apollo', 'Surat', 5.0, 'apollo.png', 'Private', '', 'Hey'),
+(3, 'Apex', 'Anand', 5.0, 'hello.png', 'Public', '', 'Hiii');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hos_cat`
+--
+
+CREATE TABLE `hos_cat` (
+  `cat_id` int(11) NOT NULL,
+  `cat_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hos_cat`
+--
+
+INSERT INTO `hos_cat` (`cat_id`, `cat_name`) VALUES
+(1, 'Abhi'),
+(2, 'Nalla'),
+(3, 'Eye');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hos_cat_link`
+--
+
+CREATE TABLE `hos_cat_link` (
+  `hos_id` int(11) NOT NULL,
+  `cat_id` int(11) NOT NULL,
+  `host_cat_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hos_cat_link`
+--
+
+INSERT INTO `hos_cat_link` (`hos_id`, `cat_id`, `host_cat_id`) VALUES
+(1, 4, 1),
+(1, 4, 2),
+(1, 4, 3);
 
 -- --------------------------------------------------------
 
@@ -110,36 +140,12 @@ INSERT INTO `hotel` (`Hotel_Id`, `Hotel_Name`, `Hotel_Location`, `Hotel_Rating`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `private_hospital_cat`
---
-
-CREATE TABLE `private_hospital_cat` (
-  `Hos_Id` varchar(5) NOT NULL,
-  `Hos_Cat` varchar(20) NOT NULL,
-  `Cat_Id` varchar(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `private_hospital_cat`
---
-
-INSERT INTO `private_hospital_cat` (`Hos_Id`, `Hos_Cat`, `Cat_Id`) VALUES
-('PH1', 'Cardiologist', 'C4'),
-('PH2', 'Dentist', 'C4'),
-('PH3', 'Eye Specialist', 'C4'),
-('PH4', 'Gynecologist ', 'C4'),
-('PH5', 'Neurologist ', 'C4'),
-('PH6', 'Psychiatrist ', 'C4');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `repair_cat`
 --
 
 CREATE TABLE `repair_cat` (
   `Rep_Id` varchar(5) NOT NULL,
-  `Rep_Category` varchar(20) NOT NULL,
+  `Rep_Category` int(11) NOT NULL,
   `Cat_Id` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -148,11 +154,11 @@ CREATE TABLE `repair_cat` (
 --
 
 INSERT INTO `repair_cat` (`Rep_Id`, `Rep_Category`, `Cat_Id`) VALUES
-('R1', 'Plumbing', 'C3'),
-('R2', 'Carpentry', 'C3'),
-('R3', 'Automobiles', 'C3'),
-('R4', 'Electric Appliances', 'C3'),
-('R5', 'Electronic Appliance', 'C3');
+('R1', 0, 'C3'),
+('R2', 0, 'C3'),
+('R3', 0, 'C3'),
+('R4', 0, 'C3'),
+('R5', 0, 'C3');
 
 -- --------------------------------------------------------
 
@@ -188,7 +194,7 @@ INSERT INTO `repair_details` (`Rep_Id`, `Rep_Name`, `Rep_Location`, `Rep_Rating`
 CREATE TABLE `restaurant_cat` (
   `RCat_Id` varchar(5) NOT NULL,
   `RCat_Name` varchar(20) NOT NULL,
-  `Cat_Id` varchar(5) NOT NULL
+  `Cat_Id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -196,12 +202,12 @@ CREATE TABLE `restaurant_cat` (
 --
 
 INSERT INTO `restaurant_cat` (`RCat_Id`, `RCat_Name`, `Cat_Id`) VALUES
-('RC1', 'Chinese', 'C1'),
-('RC2', 'Mexican', 'C1'),
-('RC3', 'Italian', 'C1'),
-('RC4', 'South Indian', 'C1'),
-('RC5', 'Gujarati ', 'C1'),
-('RC6', 'Punjabi', 'C1');
+('RC1', 'Chinese', 0),
+('RC2', 'Mexican', 0),
+('RC3', 'Italian', 0),
+('RC4', 'South Indian', 0),
+('RC5', 'Gujarati ', 0),
+('RC6', 'Punjabi', 0);
 
 -- --------------------------------------------------------
 
@@ -241,22 +247,27 @@ INSERT INTO `restaurant_details` (`Rest_Id`, `Rest_Name`, `Rest_Location`, `Rest
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`Cat_Id`);
-
---
--- Indexes for table `hospital`
---
-ALTER TABLE `hospital`
-  ADD PRIMARY KEY (`Hospital_Id`);
+  ADD PRIMARY KEY (`cid`);
 
 --
 -- Indexes for table `hospital_details`
 --
 ALTER TABLE `hospital_details`
-  ADD PRIMARY KEY (`Hos_Id`),
-  ADD UNIQUE KEY `Hos_Contact` (`Hos_Contact`),
-  ADD KEY `hospital_details_ibfk_1` (`HosCat_Id`),
-  ADD KEY `hospital_details_ibfk_2` (`PHos_Cat_Id`);
+  ADD PRIMARY KEY (`Hos_Id`);
+
+--
+-- Indexes for table `hos_cat`
+--
+ALTER TABLE `hos_cat`
+  ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Indexes for table `hos_cat_link`
+--
+ALTER TABLE `hos_cat_link`
+  ADD KEY `hospital_details to host_cat_link` (`hos_id`),
+  ADD KEY `host_cat to host_cat_link` (`host_cat_id`),
+  ADD KEY `category to host_cat_link` (`cat_id`);
 
 --
 -- Indexes for table `hotel`
@@ -265,13 +276,6 @@ ALTER TABLE `hotel`
   ADD PRIMARY KEY (`Hotel_Id`),
   ADD UNIQUE KEY `Hotel_Contact` (`Hotel_Contact`),
   ADD KEY `HotelCat_Id` (`HotelCat_Id`);
-
---
--- Indexes for table `private_hospital_cat`
---
-ALTER TABLE `private_hospital_cat`
-  ADD PRIMARY KEY (`Hos_Id`),
-  ADD KEY `Cat_Id` (`Cat_Id`);
 
 --
 -- Indexes for table `repair_cat`
@@ -292,8 +296,7 @@ ALTER TABLE `repair_details`
 -- Indexes for table `restaurant_cat`
 --
 ALTER TABLE `restaurant_cat`
-  ADD PRIMARY KEY (`RCat_Id`),
-  ADD KEY `Cat_Id` (`Cat_Id`);
+  ADD PRIMARY KEY (`RCat_Id`);
 
 --
 -- Indexes for table `restaurant_details`
@@ -304,45 +307,44 @@ ALTER TABLE `restaurant_details`
   ADD KEY `RCat_Id` (`RCat_Id`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `hospital_details`
+--
+ALTER TABLE `hospital_details`
+  MODIFY `Hos_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `hos_cat`
+--
+ALTER TABLE `hos_cat`
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `hospital_details`
+-- Constraints for table `hos_cat_link`
 --
-ALTER TABLE `hospital_details`
-  ADD CONSTRAINT `hospital_details_ibfk_1` FOREIGN KEY (`HosCat_Id`) REFERENCES `hospital` (`Hospital_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `hospital_details_ibfk_2` FOREIGN KEY (`PHos_Cat_Id`) REFERENCES `private_hospital_cat` (`Hos_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `hotel`
---
-ALTER TABLE `hotel`
-  ADD CONSTRAINT `hotel_ibfk_1` FOREIGN KEY (`HotelCat_Id`) REFERENCES `category` (`Cat_Id`);
-
---
--- Constraints for table `private_hospital_cat`
---
-ALTER TABLE `private_hospital_cat`
-  ADD CONSTRAINT `private_hospital_cat_ibfk_1` FOREIGN KEY (`Cat_Id`) REFERENCES `category` (`Cat_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `repair_cat`
---
-ALTER TABLE `repair_cat`
-  ADD CONSTRAINT `repair_cat_ibfk_1` FOREIGN KEY (`Cat_Id`) REFERENCES `category` (`Cat_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `hos_cat_link`
+  ADD CONSTRAINT `category to host_cat_link` FOREIGN KEY (`cat_id`) REFERENCES `category` (`cid`),
+  ADD CONSTRAINT `hospital_details to host_cat_link` FOREIGN KEY (`hos_id`) REFERENCES `hospital_details` (`Hos_Id`),
+  ADD CONSTRAINT `host_cat to host_cat_link` FOREIGN KEY (`host_cat_id`) REFERENCES `hos_cat` (`cat_id`);
 
 --
 -- Constraints for table `repair_details`
 --
 ALTER TABLE `repair_details`
   ADD CONSTRAINT `repair_details_ibfk_1` FOREIGN KEY (`RepCat_Id`) REFERENCES `repair_cat` (`Rep_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `restaurant_cat`
---
-ALTER TABLE `restaurant_cat`
-  ADD CONSTRAINT `restaurant_cat_ibfk_1` FOREIGN KEY (`Cat_Id`) REFERENCES `category` (`Cat_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `restaurant_details`
