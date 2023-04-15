@@ -60,32 +60,32 @@
         <h2>Select the category</h2>
   <div class="flex-container">
     <div class="category" id="item-1">
-    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Chinese"; ?> ">  
+    <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Chinese"; ?> ">  
     <img src="../Images/Chinese.jpeg" width="100px" height="100px">
       <figcaption>Chinese Cuisine</figcaption></a>
     </div>
     <div class="category" id="item-2">
-      <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Mexican"; ?> "> 
+      <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Mexican"; ?> "> 
       <img src="../Images/Mexican.jpeg" width="100px" height="100px"> 
       <figcaption>Mexican Cuisine</figcaption></a>
     </div>
     <div class="category" id="item-3">
-      <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Chinese"; ?> ">  
+      <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Chinese"; ?> ">  
       <img src="../Images/Italian.jpeg" width="100px" height="100px">
       <figcaption>Italian Cuisine</figcaption></a>
     </div>
     <div class="category" id="item-4">
-    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "South Indian"; ?> ">  
+    <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "South Indian"; ?> ">  
       <img src="../Images/South_indian.jpeg" width="100px" height="100px">
       <figcaption>South Indian</figcaption></a>
     </div>
     <div class="category" id="item-5">
-    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Gujarati"; ?> ">  
+    <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Gujarati"; ?> ">  
       <img src="../Images/Gujarati.jpeg" width="100px" height="100px">
       <figcaption>Gujarati Food</figcaption></a>
     </div>
     <div class="category" id="item-6">
-    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Punjabi"; ?> ">  
+    <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Punjabi"; ?> ">  
       <img src="../Images/Punjabi.jpeg" width="100px" height="100px">
       <figcaption>Punjabi Food</figcaption></a>
     </div>

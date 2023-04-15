@@ -70,25 +70,6 @@
       </div>
       <p id="he"></p>
       <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
-    
-      <br><br>
-      <div class="head2">
-        <span class="main" id="location">
-          <!-- <div class="form-group col-md-6"> -->
-          <label for="Location"></label>
-          <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-          <input type="text" class="form-control" id="Location" placeholder="Location">
-          <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
-        </span>
-    
-        <span class="main" id="search">
-          <!-- <div class="form-group col-md-6"> -->
-          <label for="Input"></label>
-          <input type="text" class="form-control" id="Input" placeholder="Search Here" value = "Restaurant">
-          <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
-          <!-- </div> -->
-        </span>
-      </div>
       <br><br>
       <h1 style="color:white;">Your Searched Results:</h1>
 
@@ -109,7 +90,7 @@
         <span  class="span1" id="det">
             <h1><?php echo $item['Rest_Name']; ?></h1>
             <?php echo $item['Rest_Description']; ?><br>
-            <?php echo "Location:".$item['Rest_Location']; ?><br>
+            <?php echo "Location: ".$item['Rest_Location']; ?><br>
             <?php echo "Address: ".$item['Rest_Address']; ?><br>
             <?php echo "Rating: ".$item['Rest_Rating']; ?><br>
             <?php echo "Contact: ".$item['Rest_Contact']; ?><br>
