@@ -131,7 +131,7 @@
 					?>
 					<div class="div1">
         <span  class="span1"  id="img1">
-            <img src="../Images/new-sarovar-kathiyawadi.jpg" height="200px" w0idth="200px">
+            <img src="<?php echo $row['Hotel_Image'];?>" height="200px" w0idth="200px">
         </span>
         <span  class="span1" id="det">
 					<h1><?php echo $row['Hotel_Name']; ?></h1>
