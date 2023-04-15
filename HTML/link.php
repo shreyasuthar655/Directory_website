@@ -4,7 +4,8 @@
     $type=$_GET['type'];
     $sql = "select * from hospital_details where Hos_Location='$loc' and category='$type'";
     $result = mysqli_query($conn, $sql);
-    $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
+    $data = mysqli_fetch_all($result,MYSQLI_ASSOC); //fetches all result rows and returns the result-set as an associative array, a numeric array, or both.     
+    //mysqli_fetch_all(result, resulttype) --> resulttype = MYSQLI_ASSOC, MYSQLI_NUM (default), MYSQLI_BOTH
     ?>
     <table>
         <th>Hospital Name</th>

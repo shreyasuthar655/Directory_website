@@ -13,7 +13,7 @@
 <body>
   <div class="head1">
     <div class="main" id="logo">
-      <img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px">
+    <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
     </div>
     <nav class="navbar" id="h">
       <ul>

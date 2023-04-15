@@ -33,45 +33,66 @@
   <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
 
   <br><br>
+  <form action="" method="post">
   <div class="head2">
     <span class="main" id="location">
       <!-- <div class="form-group col-md-6"> -->
       <label for="Location"></label>
       <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-      <input type="text" class="form-control" id="Location" placeholder="Location">
-      <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
+      <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
+      <button class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
     </span>
 
     <span class="main" id="search">
       <!-- <div class="form-group col-md-6"> -->
       <label for="Input"></label>
-      <input type="text" class="form-control" id="Input" placeholder="Search Here" value = "Restaurant">
-      <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
+      <input type="text" name="category" class="form-control" id="Input" placeholder="Search Here" value = "Restaurant">
+      <button class="but" name="btn" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
       <!-- </div> -->
     </span>
   </div>
   <br><br>
-  <h2>Select the category</h2>
+  <?php
+    if(isset($_REQUEST['btn']))
+    {
+      $loc = $_REQUEST['location'];
+      ?>
+        <h2>Select the category</h2>
   <div class="flex-container">
-    <div class="category" id="item-1"><a href="link.html"><img src="../Images/Chinese.jpeg" width="100px" height="100px">
+    <div class="category" id="item-1">
+    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Chinese"; ?> ">  
+    <img src="../Images/Chinese.jpeg" width="100px" height="100px">
       <figcaption>Chinese Cuisine</figcaption></a>
     </div>
-    <div class="category" id="item-2"><a href="link.html"><img src="../Images/Mexican.jpeg" width="100px" height="100px">
+    <div class="category" id="item-2">
+      <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Mexican"; ?> "> 
+      <img src="../Images/Mexican.jpeg" width="100px" height="100px"> 
       <figcaption>Mexican Cuisine</figcaption></a>
     </div>
-    <div class="category" id="item-3"><a href="link.html"><img src="../Images/Italian.jpeg" width="100px" height="100px">
+    <div class="category" id="item-3">
+      <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Chinese"; ?> ">  
+      <img src="../Images/Italian.jpeg" width="100px" height="100px">
       <figcaption>Italian Cuisine</figcaption></a>
     </div>
-    <div class="category" id="item-4"><a href="link.html"><img src="../Images/South_indian.jpeg" width="100px" height="100px">
+    <div class="category" id="item-4">
+    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "South Indian"; ?> ">  
+      <img src="../Images/South_indian.jpeg" width="100px" height="100px">
       <figcaption>South Indian</figcaption></a>
     </div>
-    <div class="category" id="item-5"><a href="link.html"><img src="../Images/Gujarati.jpeg" width="100px" height="100px">
+    <div class="category" id="item-5">
+    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Gujarati"; ?> ">  
+      <img src="../Images/Gujarati.jpeg" width="100px" height="100px">
       <figcaption>Gujarati Food</figcaption></a>
     </div>
-    <div class="category" id="item-6"><a href="link.html"><img src="../Images/Punjabi.jpeg" width="100px" height="100px">
+    <div class="category" id="item-6">
+    <a href="Link_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Punjabi"; ?> ">  
+      <img src="../Images/Punjabi.jpeg" width="100px" height="100px">
       <figcaption>Punjabi Food</figcaption></a>
     </div>
   </div>
+  <?php
+      }
+  ?>
 </body>
 
 </html>

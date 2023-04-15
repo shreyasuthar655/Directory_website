@@ -1,7 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<?php
+    include '../connection.php';
+    $loc=$_GET['location'];
+    $type=$_GET['type'];
+    $sql = "select * from (restaurant_details join rest_cat_link on restaurant_details.Rest_Id=rest_cat_link.Rest_Id) join restaurant_cat on RCat_Id=Res_Cat_Id where restaurant_details.Rest_Location='$loc' and restaurant_cat.RCat_Name='$type'";
+    $result = mysqli_query($conn, $sql);
+    $data = mysqli_fetch_all($result,MYSQLI_ASSOC); //fetches all result rows and returns the result-set as an associative array, a numeric array, or both.     
+    //mysqli_fetch_all(result, resulttype) --> resulttype = MYSQLI_ASSOC, MYSQLI_NUM (default), MYSQLI_BOTH
+    if(!$data)
+    {
+        echo '<script>alert("No result found!")</script>;';
+    }
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +41,7 @@
             padding-left: 18px;
             border: 1px solid rgb(255, 255, 255);
             border-radius: 10px;
+            color: white;
             /* padding-bottom: -10px; */
         }
 
@@ -45,7 +58,7 @@
 <body>
     <div class="head1">
         <div class="main" id="logo">
-          <img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px">
+        <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
         </div>
         <nav class="navbar" id="h">
           <ul>
@@ -77,19 +90,53 @@
         </span>
       </div>
       <br><br>
-    <div class="div1">
+      <h1 style="color:white;">Your Searched Results:</h1>
+
+        <?php
+        foreach($data as $item)
+    {
+        $restid=$item['Rest_Id'];
+        $sql1="select * from Rest_cat_link where Rest_id='$restid'";
+        $result1 = mysqli_query($conn, $sql1);
+        $data1 = mysqli_fetch_all($result1,MYSQLI_ASSOC);
+       
+        ?>
+        
+            <div class="div1">
         <span  class="span1"  id="img1">
             <img src="../Images/new-sarovar-kathiyawadi.jpg" height="200px" w0idth="200px">
         </span>
         <span  class="span1" id="det">
-            <h1>Sarovar Kathiyawadi Hotel<br></h1>
-            <h3>Ratings: 4.0<br>
-                Address: NH 8, near deep mangal society, Kabilpore, Navsari<br>
-                Description: Attractive outside sitting, surrounded by garden with good kathiyawadi food.<br>
-                Contact: 1234665439
+            <h1><?php echo $item['Rest_Name']; ?></h1>
+            <?php echo $item['Rest_Description']; ?><br>
+            <?php echo "Location:".$item['Rest_Location']; ?><br>
+            <?php echo "Address: ".$item['Rest_Address']; ?><br>
+            <?php echo "Rating: ".$item['Rest_Rating']; ?><br>
+            <?php echo "Contact: ".$item['Rest_Contact']; ?><br>
+            <?php echo "Available Cuisines: "; ?>
+            <?php 
+                    foreach($data1 as $item1)
+                    {
+                        $cat_id=$item1['Res_Cat_Id'];
+                        $sql2="select * from restaurant_cat where RCat_id='$cat_id'";
+                        $result2 = mysqli_query($conn, $sql2);
+                        $data2 = mysqli_fetch_all($result2,MYSQLI_ASSOC);
+                        foreach($data2 as $item2)
+                            echo $item2['RCat_Name'] . ",";
+                            
+                    }
+                ?>
+            
             </h3>
         </span>
     </div>
+                
+        <?php
+    }
+    ?>
+    </table>
+    <?php
+?>
 </body>
 
 </html>

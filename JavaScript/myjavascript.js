@@ -5,7 +5,7 @@
       if (l == "") {
         alert("Enter location");
       }
-      if (!validateLoc(l)) {
+      elseif (!validateLoc(l)) {
         alert("Please enter a valid Location.");
         return;
       }
