@@ -100,7 +100,11 @@
     <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Punjabi"; ?> ">  
       <img src="../Images/Punjabi.jpeg" width="100px" height="100px">
       <figcaption>Punjabi Food</figcaption></a>
-    </div>
+    <div class="category" id="item-7">
+    <!-- <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "All"; ?> ">  
+      <img src="../Images/Punjabi.jpeg" width="100px" height="100px">
+      <figcaption>All Cuisines</figcaption></a>
+    </div> -->
   </div>
   <br><br><br>
   </div>

@@ -19,8 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Output</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="Restaurant.css">
-  <link href='../CSS/mycss.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/mycss.css">
+    <link rel="stylesheet" href="../CSS/output.css">
   <script src="../JavaScript/myjavascript.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -39,9 +39,9 @@
             margin: 10px;
             padding-top: 18px;
             padding-left: 18px;
-            border: 1px solid rgb(255, 255, 255);
+            border: 1px solid black;
             border-radius: 10px;
-            color: white;
+            color: black;
             /* padding-bottom: -10px; */
         }
 

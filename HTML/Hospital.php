@@ -55,12 +55,12 @@
         <h2>Which type of Hospital would you prefere?</h2>
     <div class="flex-container2">
         <div class="choice">
-          <a href="link.php?location=<?php echo $loc; ?>&type=<?php echo "Public"; ?> ">
+          <a href="Output_Hospital.php?location=<?php echo $loc; ?>&type=<?php echo "Public"; ?> ">
             <img src="../Images/public.png" height="50px" width="100px">
           </a>
         </div>
         <div class="choice">
-          <a href="link.php?location=<?php echo $loc; ?>&type=<?php echo "Private"; ?> ">
+          <a href="Output_Hospital.php?location=<?php echo $loc; ?>&type=<?php echo "Private"; ?> ">
             <img src="../Images/private.png" height="50px" width="100px">
           </a>
         </div>

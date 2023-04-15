@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel</title>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-  <link rel="stylesheet" type="text/css" href="../CSS/mycss.css">
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="../JavaScript/myjavascript.js"></script>
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/mycss.css">
+    <link rel="stylesheet" href="../CSS/output.css">    
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="../JavaScript/myjavascript.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+        body {
+            font-family: "Poppins";
+        }
+
+        .span1 {
+            display: inline-block;
+        }
+
+        .div1 {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            padding-top: 18px;
+            padding-left: 18px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            /* padding-bottom: -10px; */
+        }
+
+        #img1 {
+            margin-right: 50px;
+        }
+
+        #det {
+            text-align:left;
+        }
+    </style>
+</head>
 <body>
   <div class="head1">
     <div class="main" id="logo">
-      <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
+    <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
     </div>
     <nav class="navbar" id="h">
       <ul>
@@ -28,58 +57,101 @@
   </div>
   <p id="he"></p>
   <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
-
   <br><br>
   <form action="" method="post">
-  <div class="head2">
-    <span class="main" id="location">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Location"></label>
-      <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-      <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
-      <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
-    </span>
+    <div class="head2">
+      <span class="main" id="location">
+        <!-- <div class="form-group col-md-6"> -->
+        <label for="Location"></label>
+        <!-- <i class="material-icons" style="font-size:36px">place</i> -->
+        <input type="text" class="form-control" id="Location" name="location" placeholder="Location" required>
+        <!-- <button type="submit" class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button> -->
+      </span>
 
-    <span class="main" id="search">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Input"></label>
-      <input type="text" name="category" class="form-control" id="Input" placeholder="Search Here"  value="Hotel">
-      <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
-      <!-- </div> -->
-    </span>
-  </div>
+      <span class="main" id="search">
+        <!-- <div class="form-group col-md-6"> -->
+        <!-- <label for="Input"></label> -->
+        <!-- <input type="text" name="category" class="form-control" id="Input" value="Hospital"> -->
+        <!-- <button type="submit" class="but" name="btn" onclick="checkk()"><span id="m" class="fa fa-search"></span></button> -->
+        <!-- </div> -->
+		<label for="sort">Sort by:</label>
+		<select name="sort" id="sort" class="form-contol">
+			<option value="ratings">Ratings</option>
+			<option value="price_high">Price High to Low</option>
+			<option value="price_low">Price Low to High</option>
+		</select>
+		<button type="submit">Search</button>
+	</form>
+	<hr>
+      </span>
+    </div>
+  </form>
   <br><br>
-  <?php
-    if(isset($_REQUEST['btn']))
-    {
-      $loc = $_REQUEST['location'];
-      ?>
-  <h3 style="text-align: left; margin-left: 50px;">Sort by:</h3>
-  <div class="sort">
-    <select class="form-select" id="sort1" aria-label="Default select example">
-      <option value="0">Rating</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <select class="form-select" id="sort2" aria-label="Default select example">
-      <option value="star">Star Rating</option>
-      <option value="3star">3-Star Hotels</option>
-      <option value="4star">3-Star Hotels</option>
-      <option value="5star">5-Star Hotels</option>
-      <option value="7star">7-Star Hotels</option>
-    </select>
-    <select class="form-select" id="sort3" aria-label="Default select example">
-      <option value="0">Price</option>
-      <option value="ltoh">Low to High</option>
-      <option value="htol">High to Low</option>
-    </select>
-  </div>
-  <?php
-    }
-    ?>
-</body>
+	<!-- <form method="POST" action=""> -->
+		<!-- <label for="location">Location:</label> -->
+		<!-- <input type="text" name="location" id="location"> -->
 
+      <h1 style="color:black;">Your Searched Results:</h1>
+	<?php
+		// Check if the form has been submitted
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+			// Get the user inputs
+			$location = $_POST['location'];
+			$sort = $_POST['sort'];
+
+			// Connect to the database
+			$servername = 'localhost';
+			$username = 'root';
+			$password = '';
+			$dbname = 'mini_project';
+			$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+			// Check if the connection was successful
+			if (!$conn) {
+				die('Connection failed: ' . mysqli_connect_error());
+			}
+
+			// Prepare the SQL statement
+			if ($sort == 'ratings') {
+				$sql = "SELECT * FROM hotel WHERE Hotel_Location='$location' ORDER BY Hotel_Rating DESC";
+			} elseif ($sort == 'price_high') {
+				$sql = "SELECT * FROM hotel WHERE Hotel_Location='$location' ORDER BY Hotel_PricePerNight DESC";
+			} elseif ($sort == 'price_low') {
+				$sql = "SELECT * FROM hotel WHERE Hotel_Location='$location' ORDER BY Hotel_PricePerNight ASC";
+			}
+
+			// Execute the SQL statement
+			$result = mysqli_query($conn, $sql);
+      $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
+			// Check if there are any results
+			?>
+			
+			<?php
+				foreach($data as $row) {
+					?>
+					<div class="div1">
+        <span  class="span1"  id="img1">
+            <img src="../Images/new-sarovar-kathiyawadi.jpg" height="200px" w0idth="200px">
+        </span>
+        <span  class="span1" id="det">
+					<h1><?php echo $row['Hotel_Name']; ?></h1>
+            <?php echo $row['Hotel_Description']; ?></br>
+            <?php echo $row['Hotel_Location']; ?><br>
+            <?php echo $row['Hotel_Rating']; ?><br>
+            <?php echo $row['Hotel_PricePerNight']; ?><br>
+            <?php echo $row['Hotel_Contact']; ?></br>
+			</h3>
+        </span>
+    </div>
+			<?php
+				}			
+				?>
+				
+
+			
+          <?php  
+		}
+		?>
+	?>
+</body>
 </html>
