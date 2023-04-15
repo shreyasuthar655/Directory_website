@@ -15,11 +15,12 @@
   <script src="../JavaScript/myjavascript.js"></script>
   <style>
     body{
-      background-image: url('indeximg.png');
+      background-image: url('blur1.jpg');
       background-repeat: no-repeat;
-      background-position-y: 80%;
-      background-position-x: -5%;
-      background-size: 25%;
+      /* background-position-y: 80%; */
+      /* background-position-x: -5%; */
+      background-size:cover;
+      z-index: 2  ;
     }
   </style>
 </head>
@@ -27,7 +28,7 @@
 <body>
   <div class="head1">
     <div class="main" id="logo">
-      <img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px">
+      <img class="logo" src="LOGO.png" height="100px">
     </div>
     <nav class="navbar" id="h">
       <ul>
@@ -39,8 +40,11 @@
   </div>
   <p id="he"></p>
   <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
-
-  <br><br>
+  <h1>
+    Welcome User,
+  </h1>
+  <div id = "bag">
+    <br><br>
   <div class="head2">
     <span class="main" id="location">
       <!-- <div class="form-group col-md-6"> -->
@@ -49,7 +53,7 @@
       <input type="text" class="form-control" id="Location" placeholder="Location">
       <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
     </span>
-
+    
     <span class="main" id="search">
       <!-- <div class="form-group col-md-6"> -->
       <label for="Input"></label>
@@ -96,6 +100,7 @@
         <figcaption>Hospital</figcaption>
       </a>
     </div>
+  </div><br><br>
   </div>
   <!-- <br>
   <br>

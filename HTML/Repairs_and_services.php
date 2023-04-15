@@ -10,14 +10,24 @@
   <link rel="stylesheet" href="../CSS/mycss.css">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <script src="../JavaScript/myjavascript.js"></script>
+  <style>
+    body {
+      background-image: url('blur1.jpg');
+      background-repeat: no-repeat;
+      /* background-position-y: 80%; */
+      /* background-position-x: -5%; */
+      background-size: cover;
+      z-index: 2;
+    }
+  </style>
 </head>
 
 <body>
   <div class="head1">
     <div class="main" id="logo">
-      
+
       <a href="../HTML/index1.html">
-        <img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px">
+        <img class="logo" src="LOGO.png" height="100px">
       </a>
     </div>
     <nav class="navbar" id="h">
@@ -33,64 +43,59 @@
 
   <br><br>
   <form action="" method="post">
-  <div class="head2">
-    <span class="main" id="location">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Location"></label>
-      <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-      <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
-      <button class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
-    </span>
+  <div id="repair">
+    <div class="head2">
+      <br><br>
+      <span class="main" id="location">
+        <!-- <div class="form-group col-md-6"> -->
+        <label for="Location"></label>
+        <!-- <i class="material-icons" style="font-size:36px">place</i> -->
+        <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
+        <button class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
+      </span>
 
-    <span class="main" id="search">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Input"></label>
-      <input type="text" name="category" class="form-control" id="Input" placeholder="Search Here" value="Repairs">
-      <button class="but" name="btn" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
-      <!-- </div> -->
-    </span>
-  </div>
-  <br><br>
-  <?php
-  if(isset($_REQUEST['btn']))
-  {
-    $loc = $_REQUEST['location'];
-    ?>
-  <h2>Select the category</h2>
-  <div class="flex-container">
-    <div class="category" id="item-1">
-          <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Plumbing"; ?> ">  
-          <img src="../Images/Plumbing.png" width="100px" height="100px">
-        <figcaption>Plumbing</figcaption>
-      </a>
+      <span class="main" id="search">
+        <!-- <div class="form-group col-md-6"> -->
+        <label for="Input"></label>
+        <input type="text" class="form-control" id="Input" placeholder="Search Here" value="Repairs">
+        <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
+        <!-- </div> -->
+      </span>
     </div>
-    <div class="category" id="item-2">
-          <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Carpentry"; ?> ">  
-          <img src="../Images/Carpentry.png" width="100px" height="100px">
-        <figcaption>Carpentry</figcaption>
-      </a>
+    <br><br>
+    <h2>Select the category</h2>
+    <div class="flex-container">
+      <div class="category" id="item-1">
+        <a href="link.html"><img src="../Images/Plumbing.png" width="100px" height="100px">
+          <figcaption>Plumbing</figcaption>
+        </a>
+      </div>
+      <div class="category" id="item-2">
+        <a href="link.html"><img src="../Images/Carpentry.png" width="100px" height="100px">
+          <figcaption>Carpentry</figcaption>
+        </a>
+      </div>
+      <div class="category" id="item-3">
+        <a href="link.html"><img src="../Images/Garage.png" width="100px" height="100px">
+          <figcaption>Automobiles</figcaption>
+        </a>
+      </div>
+      <div class="category" id="item-4">
+        <a href="link.html"><img src="../Images/Electiric_Services.jpeg" width="100px" height="100px">
+          <figcaption>Electric Appliances</figcaption>
+        </a>
+      </div>
+      <div class="category" id="item-5">
+        <a href="link.html"><img src="../Images/Electronic_Services.png" width="100px" height="100px">
+          <figcaption>Electronic Appliances</figcaption>
+        </a>
+      </div>
     </div>
-    <div class="category" id="item-3">
-          <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Automobiles"; ?> ">  
-          <img src="../Images/Garage.png" width="100px" height="100px">
-        <figcaption>Automobiles</figcaption>
-      </a>
-    </div>
-    <div class="category" id="item-4">
-          <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Electric Appliances"; ?> ">  
-          <img src="../Images/Electiric_Services.jpeg" width="100px" height="100px">
-        <figcaption>Electric Appliances</figcaption>
-      </a>
-    </div>
-    <div class="category" id="item-5">
-          <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Electronic Appliances"; ?> ">  
-          <img src="../Images/Electronic_Services.png" width="100px" height="100px">
-        <figcaption>Electronic Appliances</figcaption>
-      </a>
-    </div>
+    <br><br><br>
   </div>
   <?php
   }
   ?>
 </body>
+
 </html>

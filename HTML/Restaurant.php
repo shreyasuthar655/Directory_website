@@ -14,12 +14,22 @@
     function valuee(){
     document.getElementById("Input").value = "Restaurant";}
   </script>
+  <style>
+    body{
+      background-image: url('blur1.jpg');
+      background-repeat: no-repeat;
+      /* background-position-y: 80%; */
+      /* background-position-x: -5%; */
+      background-size:cover;
+      z-index: 2  ;
+    }
+  </style>
 </head>
 
 <body>
   <div class="head1">
     <div class="main" id="logo">
-      <img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px">
+      <img class="logo" src="LOGO.png" height="100px">
     </div>
     <nav class="navbar" id="h">
       <ul>
@@ -31,8 +41,9 @@
   </div>
   <p id="he"></p>
   <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
-
   <br><br>
+  <div id = "food">
+    <br>
   <form action="" method="post">
   <div class="head2">
     <span class="main" id="location">
@@ -43,6 +54,7 @@
       <button class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
     </span>
 
+   
     <span class="main" id="search">
       <!-- <div class="form-group col-md-6"> -->
       <label for="Input"></label>
@@ -90,9 +102,12 @@
       <figcaption>Punjabi Food</figcaption></a>
     </div>
   </div>
+  <br><br><br>
+  </div>
   <?php
       }
   ?>
+  
 </body>
 
 </html>
