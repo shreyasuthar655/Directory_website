@@ -57,13 +57,13 @@
   <div class="head1">
     <div id="n">
       <div class="main" id="logo">
-        <img class="logo" src="LOGO.png" height="100px">
+        <a href = "../HTML/intro.html"><img class="logo" src="LOGO.png" height="100px"></a>
       </div>
       <nav class="navbar" id="h">
         <ul>
-          <li><a href="C:\xampp\htdocs\mini project\Directory_website\HTML\Hotels.php">Home</a></li>
-          <li><a href="#a">About Us</a></li>
-          <li id="q"><a href="#c">Contact</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="../HTML/abconus.html">About Us</a></li>
+          <li id="q"><a href="../HTML/abconus.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -72,7 +72,7 @@
     <div id="welcome">
       <h1>
         Welcome User,<br>
-        <script>
+        <script> 
           const date = new Date();
           var m = date.getHours();
           // document.write(m);
