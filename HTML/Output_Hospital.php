@@ -22,12 +22,24 @@
     <link rel="stylesheet" href="../CSS/mycss.css">
     <link rel="stylesheet" href="../CSS/output.css">
   <script src="../JavaScript/myjavascript.js"></script>
+  <style>
+    body
+    {
+      background-image: url('blur1.jpg');
+      background-repeat: repeat-y;
+      /* background-position-y: 80%; */
+      /* background-position-x: -5%; */
+      background-size: cover;
+      z-index: 2;
+    }
+  </style>
 </head>
 
 <body>
     <div class="head1">
+    <div id="n">
         <div class="main" id="logo">
-        <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
+        <a href="../HTML/index1.html"><img class="logo" src="LOGO.png" height="100px"></a>
         </div>
         <nav class="navbar" id="h">
           <ul>
@@ -37,10 +49,11 @@
           </ul>
         </nav>
       </div>
+  </div>
       <p id="he"></p>
-      <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
-      <br><br>
-      <h1 style="color:white;">Your Searched Results:</h1>
+      <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
+      <br>
+      <h1 style="color:#686a6b;">Your Searched Results:</h1>
       <?php
     foreach($data as $item)
     {
@@ -51,11 +64,11 @@
         ?>
         <div class="div1">
         <span  class="span1"  id="img1">
-        <img src="<?php echo $item['Hos_Image'];?>" height="200px" w0idth="200px">
+        <img src="<?php echo $item['Hos_Image'];?>" height="200px" width="250px">
         </span>
         <span  class="span1" id="det">
-            <h1 style="text-align:left"><?php echo $item['Hos_Name']; ?></h1>
-            <h3 style="text-align:left"><?php echo $item['Hos_Description']; ?></br>
+            <h1 style="text-align:left; color: #686a6b;"><?php echo $item['Hos_Name']; ?></h1>
+            <h3 style="text-align:left; color: #686a6b;"><?php echo $item['Hos_Description']; ?></br>
             <?php echo $item['Hos_Location']; ?><br>
             <?php echo $item['Hos_Rating']; ?><br>
             <?php echo $item['category']; ?><br>
