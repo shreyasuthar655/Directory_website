@@ -20,6 +20,10 @@
       background-size: cover;
       z-index: 2;
     }
+    #location{
+      position: relative;
+      margin-left: 22%;
+    }
   </style>
 </head>
 
@@ -57,13 +61,13 @@
         <button class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
       </span>
 
-      <span class="main" id="search">
-        <!-- <div class="form-group col-md-6"> -->
-        <label for="Input"></label>
-        <input type="text" class="form-control" id="Input" placeholder="Search Here" value="Repairs">
-        <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
+      <!-- <span class="main" id="search">
+         <div class="form-group col-md-6"> -->
+        <!-- <label for="Input"></label> -->
+        <!-- <input type="text" class="form-control" id="Input" placeholder="Search Here" value="Repairs"> -->
+        <!-- <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button> -->
         <!-- </div> -->
-      </span>
+      <!-- </span> -->
     </div>
     <br><br>
     <?php
