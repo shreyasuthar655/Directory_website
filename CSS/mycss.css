@@ -46,6 +46,7 @@ img {
   position: absolute;
   /* background-color: #ffffff; */
   /* background-color: #dfd3d3; */
+  /* background-color: #eb3737; */
   background-color: #000000;
   height: 80%;
   width: 100%;
@@ -121,13 +122,14 @@ img {
 
 #location {
   position: relative;
-  left: 20%;
+  left: 15%;
   /* top: 100%; */
   box-sizing: content-box;
 }
 
 input {
   padding: 10px;
+  border-right: none;
   width: 300px;
   border-radius: 10px 0px 0px 10px;
   border: 2px solid #c9c9c9;
@@ -136,7 +138,7 @@ input {
 
 #search {
   position: relative;
-  left: 30%;
+  left: 25%;
   /* top: 100%; */
   box-sizing: content-box;
 }
@@ -163,6 +165,7 @@ button {
 button:hover {
   background: #f0f3f3;
 }
+
 /* i{
   float: left;
   width: 3%;
