@@ -96,8 +96,8 @@
           <!-- <div class="form-group col-md-6"> -->
           <label for="Location"></label>
           <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-          <input type="text" class="form-control" id="Location" placeholder="Location">
-          <!-- <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button> -->
+          <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
+          <!-- <button class="but" name="button" onclick="checkk()"><span id="s" class="fa fa-search"></span></button> -->
         </span>
 
         <span class="main" id="search">
