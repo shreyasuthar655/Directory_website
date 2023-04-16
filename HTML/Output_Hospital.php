@@ -60,7 +60,7 @@
             <?php echo $item['Hos_Rating']; ?><br>
             <?php echo $item['category']; ?><br>
             <?php echo $item['Hos_Contact']; ?></br>
-            <?php echo "Available categories: "?>
+            <?php echo "Available Categories: "?>
                 <?php 
                     foreach($data1 as $item1)
                     {

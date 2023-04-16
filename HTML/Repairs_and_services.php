@@ -65,38 +65,48 @@
       </span>
     </div>
     <br><br>
+    <?php
+    if(isset($_REQUEST['btn']))
+    {
+      $loc = $_REQUEST['location'];
+      ?>
     <h2>Select the category</h2>
     <div class="flex-container">
       <div class="category" id="item-1">
-        <a href="link.html"><img src="../Images/Plumbing.png" width="100px" height="100px">
+      <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Plumbing"; ?> ">  
+      <img src="../Images/Plumbing.png" width="100px" height="100px">
           <figcaption>Plumbing</figcaption>
         </a>
       </div>
       <div class="category" id="item-2">
-        <a href="link.html"><img src="../Images/Carpentry.png" width="100px" height="100px">
+        <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Carpentry"; ?> ">  
+        <img src="../Images/Carpentry.png" width="100px" height="100px">
           <figcaption>Carpentry</figcaption>
         </a>
       </div>
       <div class="category" id="item-3">
-        <a href="link.html"><img src="../Images/Garage.png" width="100px" height="100px">
+      <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Automobiles"; ?> ">  
+      <img src="../Images/Garage.png" width="100px" height="100px">
           <figcaption>Automobiles</figcaption>
         </a>
       </div>
       <div class="category" id="item-4">
-        <a href="link.html"><img src="../Images/Electiric_Services.jpeg" width="100px" height="100px">
+      <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Electric Appliances"; ?> ">  
+      <img src="../Images/Electiric_Services.jpeg" width="100px" height="100px">
           <figcaption>Electric Appliances</figcaption>
         </a>
       </div>
       <div class="category" id="item-5">
-        <a href="link.html"><img src="../Images/Electronic_Services.png" width="100px" height="100px">
+      <a href="Output_Repair.php?location=<?php echo $loc; ?>&type=<?php echo "Electronic Appliances"; ?> ">  
+      <img src="../Images/Electronic_Services.png" width="100px" height="100px">
           <figcaption>Electronic Appliances</figcaption>
         </a>
       </div>
     </div>
     <br><br><br>
-    <!-- <?php
-    // }
-  ?> -->
+    <?php
+    }
+  ?>
   </div>
 
 </body>
