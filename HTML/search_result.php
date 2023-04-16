@@ -13,7 +13,7 @@
     }
     elseif($type=='Hospital')
     {
-        $sql = "select DISTINCT(hos_cat_link.Hos_Id), hospital_details.Hos_Name,hospital_details.Hos_Address,hospital_details.Hos_Location,hospital_details.Hos_Rating, hospital_details.Hos_Image,hospital_details.Hos_Contact,hospital_details.Hos_Description from (hospital_details join hos_cat_link on hospital_details.Hos_Id=hos_cat_link.hos_id) join category on cid=cat_id where hospital_details.Hos_Location='$loc' and category.Cat_Name='Hospital'";
+        $sql = "select DISTINCT(hos_cat_link.Hos_Id), hospital_details.Hos_Name, hospital_details.category,hospital_details.Hos_Address,hospital_details.Hos_Location,hospital_details.Hos_Rating, hospital_details.Hos_Image,hospital_details.Hos_Contact,hospital_details.Hos_Description from (hospital_details join hos_cat_link on hospital_details.Hos_Id=hos_cat_link.hos_id) join category on cid=cat_id where hospital_details.Hos_Location='$loc' and category.Cat_Name='Hospital'";
     }
     elseif($type=='Hotel')
     {
