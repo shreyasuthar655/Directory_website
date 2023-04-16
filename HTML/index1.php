@@ -63,20 +63,21 @@
     </div>
     <div id="bag">
       <br><br>
+      <form action="search_result.php" method="GET">
       <div class="head2">
         <span class="main" id="location">
           <!-- <div class="form-group col-md-6"> -->
           <label for="Location"></label>
           <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-          <input type="text" class="form-control" id="Location" placeholder="Location">
-          <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
+          <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
+          <button class="but" name="button" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
         </span>
 
         <span class="main" id="search">
           <!-- <div class="form-group col-md-6"> -->
           <label for="Input"></label>
-          <input type="text" class="form-control" id="Input" placeholder="Search Here">
-          <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
+          <input type="text" name="category" class="form-control" id="Input" placeholder="Search Here">
+          <button type="submit" class="but" name="btn" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
           <!-- </div> -->
         </span>
       </div>
