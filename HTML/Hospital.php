@@ -9,11 +9,22 @@
     <link rel="stylesheet" href="../CSS/mycss.css" >
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="../JavaScript/myjavascript.js"></script>
+    <style>
+    body{
+      background-image: url('blur1.jpg');
+      background-repeat: no-repeat;
+      /* background-position-y: 80%; */
+      /* background-position-x: -5%; */
+      background-size:cover;
+      z-index: 2  ;
+    }
+  </style>
 </head>
 <body>
   <div class="head1">
+  <div id="n">
     <div class="main" id="logo">
-    <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
+    <a href=".C:\xampp\htdocs\mini project\Directory_website\HTML\Hotels.php"><img class="logo" src="LOGO.png" height="100px"></a>
     </div>
     <nav class="navbar" id="h">
       <ul>
@@ -23,10 +34,13 @@
       </ul>
     </nav>
   </div>
+  </div>
   <p id="he"></p>
-  <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
+  <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
 
   <br><br>
+  <div id = "Hospital">
+    <br><br>
   <form action="" method="post">
     <div class="head2">
       <span class="main" id="location">
@@ -52,7 +66,7 @@
     {
       $loc = $_REQUEST['location'];
       ?>
-        <h2>Which type of Hospital would you prefere?</h2>
+        <h2>Which type of Hospital would you prefer?</h2>
     <div class="flex-container2">
         <div class="choice">
           <a href="Output_Hospital.php?location=<?php echo $loc; ?>&type=<?php echo "Public"; ?> ">
@@ -68,6 +82,7 @@
       <?php
     }
   ?>
+  </div>
   </div>
 </body>
 </html>

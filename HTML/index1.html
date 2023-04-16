@@ -14,95 +14,113 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="../JavaScript/myjavascript.js"></script>
   <style>
-    body{
+    body {
       background-image: url('blur1.jpg');
       background-repeat: no-repeat;
       /* background-position-y: 80%; */
       /* background-position-x: -5%; */
-      background-size:cover;
-      z-index: 2  ;
+      background-size: cover;
+      z-index: 2;
     }
   </style>
 </head>
 
 <body>
+
   <div class="head1">
-    <div class="main" id="logo">
-      <img class="logo" src="LOGO.png" height="100px">
+    <div id="n">
+      <div class="main" id="logo">
+        <img class="logo" src="LOGO.png" height="100px">
+      </div>
+      <nav class="navbar" id="h">
+        <ul>
+          <li><a href="C:\xampp\htdocs\mini project\Directory_website\HTML\Hotels.php">Home</a></li>
+          <li><a href="#a">About Us</a></li>
+          <li id="q"><a href="#c">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar" id="h">
-      <ul>
-        <li><a href="#top">Home</a></li>
-        <li><a href="#a">About Us</a></li>
-        <li id="q"><a href="#c">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  <p id="he"></p>
-  <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
-  <h1>
-    Welcome User,
-  </h1>
-  <div id = "bag">
-    <br><br>
-  <div class="head2">
-    <span class="main" id="location">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Location"></label>
-      <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-      <input type="text" class="form-control" id="Location" placeholder="Location">
-      <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
-    </span>
-    
-    <span class="main" id="search">
-      <!-- <div class="form-group col-md-6"> -->
-      <label for="Input"></label>
-      <input type="text" class="form-control" id="Input" placeholder="Search Here">
-      <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
-      <!-- </div> -->
-    </span>
-  </div>
-  <br><br>
-  <h2>Select the category</h2>
-  <div class="flex-container">
-
-    <div class="category">
-      <a href="../HTML/Restaurant.php">
-        <img src="../Images/restaurant.png" height="100px" width="100px">
-        <figcaption>Restaurant</figcaption>
-      </a>
+    <p id="he"></p>
+    <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
+    <div id="welcome">
+      <h1>
+        Welcome User,<br>
+        <script>
+          const date = new Date();
+          var m = date.getHours();
+          // document.write(m);
+          if (m < 12 && m >= 0) {
+            document.write("Good Morning, Have a great day");
+          }
+          else if (m >= 12 && m <= 18) {
+            document.write("Good Afternoon, Have a great day");
+          }
+          else {
+            document.write("Good Evening, Have a great day!");
+          }
+        </script>
+      </h1>
     </div>
+    <div id="bag">
+      <br><br>
+      <div class="head2">
+        <span class="main" id="location">
+          <!-- <div class="form-group col-md-6"> -->
+          <label for="Location"></label>
+          <!-- <i class="material-icons" style="font-size:36px">place</i> -->
+          <input type="text" class="form-control" id="Location" placeholder="Location">
+          <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
+        </span>
 
-    <div class="category">
-      <a href="../HTML/Hotels.php">
-        <img src="../Images/hotel.png" height="100px" width="100px">
-        <figcaption>Hotel</figcaption>
-      </a>
-    </div>
+        <span class="main" id="search">
+          <!-- <div class="form-group col-md-6"> -->
+          <label for="Input"></label>
+          <input type="text" class="form-control" id="Input" placeholder="Search Here">
+          <button class="but" onclick="checkk()"><span id="m" class="fa fa-search"></span></button>
+          <!-- </div> -->
+        </span>
+      </div>
+      <br><br>
+      <h2>Select the category</h2>
+      <div class="flex-container">
 
-    <!-- <div class="category">
+        <div class="category">
+          <a href="../HTML/Restaurant.php">
+            <img src="../Images/restaurant.png" height="100px" width="100px">
+            <figcaption>Restaurant</figcaption>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="../HTML/Hotels.php">
+            <img src="../Images/hotel.png" height="100px" width="100px">
+            <figcaption>Hotel</figcaption>
+          </a>
+        </div>
+
+        <!-- <div class="category">
       <a href="../HTML/Automobiles.html">
         <img src="../Images/automobile.png" height="100px" width="100px">
         <figcaption>Automobile</figcaption>
       </a>
     </div> -->
 
-    <div class="category">
-      <a href="../HTML/Repairs_and_services.php">
-        <img src="../Images/repairing.png" height="100px" width="100px">
-        <figcaption>Repair</figcaption>
-      </a>
-    </div>
+        <div class="category">
+          <a href="../HTML/Repairs_and_services.php">
+            <img src="../Images/repairing.png" height="100px" width="100px">
+            <figcaption>Repair</figcaption>
+          </a>
+        </div>
 
-    <div class="category">
-      <a href="../HTML/Hospital.php">
-        <img src="../Images/hospital.png" height="100px" width="100px">
-        <figcaption>Hospital</figcaption>
-      </a>
+        <div class="category">
+          <a href="../HTML/Hospital.php">
+            <img src="../Images/hospital.png" height="100px" width="100px">
+            <figcaption>Hospital</figcaption>
+          </a>
+        </div>
+      </div><br>
     </div>
-  </div><br><br>
-  </div>
-  <!-- <br>
+    <!-- <br>
   <br>
   <br>
   <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
@@ -121,8 +139,8 @@
       <h6>
         (M) 98984 55487,<br>(C) 284567, <br>(Toll Free)XXXXXXXX
       </h6>
-    </span>
-  </div> -->
+    </span> -->
+  </div>
 </body>
 
 </html>

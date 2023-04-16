@@ -24,6 +24,7 @@
 
 <body>
   <div class="head1">
+  <div id="n">
     <div class="main" id="logo">
 
       <a href="../HTML/index1.html">
@@ -38,8 +39,9 @@
       </ul>
     </nav>
   </div>
+  </div>
   <p id="he"></p>
-  <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
+  <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
 
   <br><br>
   <form action="" method="post">
@@ -92,10 +94,11 @@
       </div>
     </div>
     <br><br><br>
+    <!-- <?php
+    // }
+  ?> -->
   </div>
-  <?php
-  }
-  ?>
+
 </body>
 
 </html>
