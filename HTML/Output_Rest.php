@@ -27,7 +27,8 @@
 
         body {
             background-image: url('blur1.jpg');
-            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background-repeat: no-repeat; */
             /* background-position-y: 80%; */
             /* background-position-x: -5%; */
             background-size: cover;
