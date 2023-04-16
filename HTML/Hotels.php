@@ -15,6 +15,12 @@
 
         body {
             font-family: "Poppins";
+            background-image: url('blur1.jpg');
+            background-repeat: no-repeat;
+            /* background-position-y: 80%; */
+            /* background-position-x: -5%; */
+            background-size: cover;
+            z-index: 2;
         }
 
         .span1 {
@@ -44,8 +50,9 @@
 </head>
 <body>
   <div class="head1">
+  <div id="n">
     <div class="main" id="logo">
-    <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
+    <a href="../HTML/index1.html"><img class="logo" src="../HTML/LOGO.png" height="100px"></a>
     </div>
     <nav class="navbar" id="h">
       <ul>
@@ -56,7 +63,7 @@
     </nav>
   </div>
   <p id="he"></p>
-  <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
+  <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
   <br><br>
   <form action="" method="post">
     <div class="head2">
@@ -82,7 +89,7 @@
 		</select>
 		<button type="submit">Search</button>
 	</form>
-	<hr>
+	<!-- <hr> -->
       </span>
     </div>
   </form>
@@ -146,12 +153,8 @@
 			<?php
 				}			
 				?>
-				
-
-			
-          <?php  
+        <?php  
 		}
 		?>
-	?>
 </body>
 </html>
