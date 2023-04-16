@@ -22,6 +22,33 @@
       background-size: cover;
       z-index: 2;
     }
+    input {
+  padding: 10px;
+  /* border-right: none; */
+  width: 300px;
+  border-radius: 10px 10px 10px 10px;
+  border: 2px solid #c9c9c9;
+  /* border-right: none; */
+}
+
+#Location
+{
+  position: relative;
+  left: 10%;
+}
+#search {
+  position: relative;
+  left: 25%;
+  /* top: 100%; */
+  box-sizing: content-box;
+}
+
+.but{
+  position: relative;
+  left: 2%;
+  border-radius: 10px 10px 10px 10px;
+  border: 2px solid #c9c9c9;
+}
   </style>
 </head>
 
@@ -69,8 +96,8 @@
           <!-- <div class="form-group col-md-6"> -->
           <label for="Location"></label>
           <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-          <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
-          <button class="but" name="button" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
+          <input type="text" class="form-control" id="Location" placeholder="Location">
+          <!-- <button class="but" onclick="checkk()"><span id="s" class="fa fa-search"></span></button> -->
         </span>
 
         <span class="main" id="search">

@@ -46,7 +46,8 @@
             margin: 10px;
             padding-top: 18px;
             padding-left: 18px;
-            border: 1px solid rgb(255, 255, 255);
+            /* border: 1px solid rgb(255, 255, 255); */
+            /* border: 1px solid rgb(0, 0, 0); */
             border-radius: 10px;
             color: white;
             /* padding-bottom: -10px; */
