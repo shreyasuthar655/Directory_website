@@ -28,6 +28,7 @@
 
 <body>
   <div class="head1">
+  <div id="n">
     <div class="main" id="logo">
       <img class="logo" src="LOGO.png" height="100px">
     </div>
@@ -40,7 +41,7 @@
     </nav>
   </div>
   <p id="he"></p>
-  <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
+  <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
   <br><br>
   <div id = "food">
     <br>
@@ -94,13 +95,13 @@
     <div class="category" id="item-5">
     <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Gujarati"; ?> ">  
       <img src="../Images/Gujarati.jpeg" width="100px" height="100px">
-      <figcaption>Gujarati Food</figcaption></a>
+      <figcaption>Gujarati Food</figcaption>  </a>
     </div>
     <div class="category" id="item-6">
     <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "Punjabi"; ?> ">  
       <img src="../Images/Punjabi.jpeg" width="100px" height="100px">
       <figcaption>Punjabi Food</figcaption></a>
-    <div class="category" id="item-7">
+    <!-- <div class="category" id="item-7"> -->
     <!-- <a href="Output_Rest.php?location=<?php echo $loc; ?>&type=<?php echo "All"; ?> ">  
       <img src="../Images/Punjabi.jpeg" width="100px" height="100px">
       <figcaption>All Cuisines</figcaption></a>
