@@ -43,7 +43,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
         body {
-            font-family: "Poppins";
+            background-image: url('blur1.jpg');
+            background-attachment: fixed;
+            /* background-position-y: 80%; */
+            /* background-position-x: -5%; */
+            background-size: cover;
+            z-index: 2;
         }
 
         .span1 {
@@ -74,21 +79,23 @@
 
 <body>
     <div class="head1">
+    <div id="n">
         <div class="main" id="logo">
-        <a href="../HTML/index1.html"><img class="logo" src="../Images/Untitled_design-removebg-preview1.png" height="100px"></a>
+        <a href="../HTML/intro.html"><img class="logo" src="LOGO.png" height="100px"></a>
         </div>
         <nav class="navbar" id="h">
           <ul>
-            <li><a href="index1.html">Home</a></li>
-            <li><a href="#a">About Us</a></li>
-            <li id="q"><a href="#c">Contact</a></li>
+          <li><a href="../HTML/index1.php">Home</a></li>
+          <li><a href="../HTML/abconus.html">About Us</a></li>
+          <li id="q"><a href="../HTML/abconus.html">Contact</a></li>
           </ul>
         </nav>
       </div>
+    </div>
       <p id="he"></p>
-      <hr style="height: 0.1px; background-color: #ffffff; width: 100%;">
-      <br><br>
-      <h1 style="color:white;">Your Searched Results:</h1>
+      <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
+      <br>
+      <h1 style="color:black;">Your Searched Results:</h1>
 
         <?php
         if($type=='Restaurant'){
