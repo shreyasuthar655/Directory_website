@@ -23,7 +23,8 @@
         body {
             font-family: "Poppins";
             background-image: url('blur1.jpg');
-            background-repeat: fixed;
+            background-attachment: fixed;
+            /* background-repeat: fixed; */
             /* background-position-y: 80%; */
             /* background-position-x: -5%; */
             background-size: cover;
