@@ -72,7 +72,7 @@
         </div>
         <nav class="navbar" id="h">
           <ul>
-            <li><a href="../HTML/index1.html">Home</a></li>
+            <li><a href="../HTML/index1.php">Home</a></li>
             <li><a href="../HTML/abconus.html">About Us</a></li>
             <li id="q"><a href="../HTML/abconus.html">Contact</a></li>
           </ul>
@@ -82,7 +82,7 @@
       <p id="he"></p>
       <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
       <br>
-      <h1 style="color:black;">Your Searched Results:</h1>
+      <h1 style="color:black;">Your Searched Results</h1>
 
         <?php
         foreach($data as $item)
@@ -96,11 +96,11 @@
         
             <div class="div1">
         <span  class="span1"  id="img1">
-        <img src="<?php echo $item['Rep_Img'];?>" height="200px" w0idth="200px">
+        <img src="<?php echo $item['Rep_Img'];?>" height="250px" w0idth="300px">
         </span>
         <span  class="span1" id="det">
-            <h1 style="text-align:left"><?php echo $item['Rep_Name']; ?></h1>
-            <h3 style="text-align:left"><?php echo $item['Rep_Description']; ?><br>
+            <h1 style="text-align:left; color:black"><?php echo $item['Rep_Name']; ?></h1>
+            <h3 style="text-align:left; color:black"><?php echo $item['Rep_Description']; ?><br>
             <?php echo "Location:".$item['Rep_Location']; ?><br>
             <?php echo "Address: ".$item['Rep_Address']; ?><br>
             <?php echo "Rating: ".$item['Rep_Rating']; ?><br>

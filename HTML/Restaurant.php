@@ -57,7 +57,7 @@
       <label for="Location"></label>
       <!-- <i class="material-icons" style="font-size:36px">place</i> -->
       <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
-      <button class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
+      <button style="  padding-top: 7.1px;" class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button>
     </span>
 
    

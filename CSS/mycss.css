@@ -131,9 +131,9 @@ input {
   padding: 10px;
   /* border-right: none; */
   width: 300px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 0px 0px 10px;
   border: 2px solid #c9c9c9;
-  /* border-right: none; */
+  border-right: none;
 }
 
 #search {
@@ -151,8 +151,8 @@ button {
   /* float: left; */
   width: 5%;
   /* padding: 7px; */
-  padding-top: 6.5px;
-  padding-bottom: 9.2px;
+  padding-top: 6.7px;
+  padding-bottom: 8.3px;
   background: white;
   color: black;
   font-size: 17px;

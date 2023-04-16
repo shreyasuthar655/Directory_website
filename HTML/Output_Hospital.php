@@ -32,6 +32,7 @@
       /* background-position-x: -5%; */
       background-size: cover;
       z-index: 2;
+      
     }
   </style>
 </head>
@@ -44,7 +45,7 @@
         </div>
         <nav class="navbar" id="h">
           <ul>
-            <li><a href="../HTML/index1.html">Home</a></li>
+            <li><a href="../HTML/index1.php">Home</a></li>
             <li><a href="../HTML/abconus.html">About Us</a></li>
             <li id="q"><a href="../HTML/abconus.html">Contact</a></li>
           </ul>
@@ -54,7 +55,7 @@
       <p id="he"></p>
       <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
       <br>
-      <h1 style="color:#686a6b; text-align: center;">Your Searched Results:</h1>
+      <h1 style="color:black; text-align: center;">Your Searched Results</h1>
       <?php
     foreach($data as $item)
     {
@@ -65,15 +66,15 @@
         ?>
         <div class="div1">
         <span  class="span1"  id="img1">
-        <img src="<?php echo $item['Hos_Image'];?>" height="200px" width="250px">
+        <img src="<?php echo $item['Hos_Image'];?>" height="250px" width="300px">
         </span>
         <span  class="span1" id="det">
-            <h1 style="text-align:left; color: #686a6b;"><?php echo $item['Hos_Name']; ?></h1>
-            <h3 style="text-align:left; color: #686a6b;"><?php echo $item['Hos_Description']; ?></br>
-            <?php echo $item['Hos_Location']; ?><br>
-            <?php echo $item['Hos_Rating']; ?><br>
-            <?php echo $item['category']; ?><br>
-            <?php echo $item['Hos_Contact']; ?></br>
+            <h1 style="text-align:left; color: black;"><?php echo $item['Hos_Name']; ?></h1>
+            <h3 style="text-align:left; color: black;"><?php echo $item['Hos_Description']; ?></br>
+            <?php echo "Location: ".$item['Hos_Location']; ?><br>
+            <?php echo "Rating: ".$item['Hos_Rating']; ?><br>
+            <?php echo "Type: ".$item['category']; ?><br>
+            <?php echo "Contact: ".$item['Hos_Contact']; ?></br>
             <?php echo "Available Categories: "?>
                 <?php 
                     foreach($data1 as $item1)

@@ -13,12 +13,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         select{
-          width: 150px;
+          width: 250px;
           margin:10px;
           /* height: 20px; */
           padding:8.5px;
           border: 2px solid #c9c9c9;
           border-radius:10px;
+          position: relative;
+          left: 2%;
         }
         body {
             font-family: "Poppins";
@@ -50,12 +52,19 @@
         #img1 {
             margin-right: 50px;
         }
-
+        #submit{
+          position:relative;
+          left: 2%;
+        }
         button{
           border-radius:10px;
         }
         #det {
             text-align:left;
+        }
+        input{
+          position: relative;
+          left:12%;
         }
     </style>
 </head>
@@ -82,7 +91,7 @@
         <!-- <div class="form-group col-md-6"> -->
         <label for="Location"></label>
         <!-- <i class="material-icons" style="font-size:36px">place</i> -->
-        <input type="text" class="form-control" id="Location" name="location" placeholder="Location" required>
+        <input style="border-radius: 10px; border:2px solid #c9c9c9;" type="text" class="form-control" id="Location" name="location" placeholder="Location" required>
         <!-- <button type="submit" class="but" name="btn" onclick="checkk()"><span id="s" class="fa fa-search"></span></button> -->
       </span>
 
@@ -98,7 +107,7 @@
 			<option value="price_high">Price High to Low</option>
 			<option value="price_low">Price Low to High</option>
 		</select>
-		<button type="submit">Search</button>
+		<button id="submit" type="submit">Search</button>
 	</form>
 	<!-- <hr> -->
       </span>
@@ -109,7 +118,7 @@
 		<!-- <label for="location">Location:</label> -->
 		<!-- <input type="text" name="location" id="location"> -->
 
-      <h1 style="text-align:center ;color:#000000;">Your Searched Results:</h1>
+      <h1 style="text-align:center ;color:#000000;">Your Searched Results</h1>
 	<?php
 		// Check if the form has been submitted
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -149,11 +158,11 @@
 					?>
 					<div class="div1">
             <span  class="span1"  id="img1">
-              <img src="<?php echo $row['Hotel_Image'];?>" height="200px" w0idth="200px">
+              <img src="<?php echo $row['Hotel_Image'];?>" height="250px" w0idth="300px">
             </span>
             <span  class="span1" id="det">
-					    <h1 style="text-align:left"><?php echo $row['Hotel_Name']; ?></h1>
-              <h3 style="text-align:left"><?php echo $row['Hotel_Description']; ?></br>
+					    <h1 style="text-align:left; color:black"><?php echo $row['Hotel_Name']; ?></h1>
+              <h3 style="text-align:left; color:black"><?php echo $row['Hotel_Description']; ?></br>
               <?php echo "Location: ".$row['Hotel_Location']; ?><br>
               <?php echo "Ratings: ".$row['Hotel_Rating']; ?><br>
               <?php echo "Price: ".$row['Hotel_PricePerNight']."Rs. per 24 hours"; ?><br>

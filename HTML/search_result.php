@@ -95,7 +95,7 @@
       <p id="he"></p>
       <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
       <br>
-      <h1 style="color:black;">Your Searched Results:</h1>
+      <h1 style="color:black;">Your Searched Results</h1>
 
         <?php
         if($type=='Restaurant'){
@@ -110,11 +110,11 @@
         
             <div class="div1">
         <span  class="span1"  id="img1">
-        <img src="<?php echo $item['Rest_Image'];?>" height="200px" w0idth="200px">
+        <img src="<?php echo $item['Rest_Image'];?>" height="250px" w0idth="300px">
         </span>
         <span  class="span1" id="det">
-            <h1 style="text-align:left"><?php echo $item['Rest_Name']; ?></h1>
-            <h3 style="text-align:left"><?php echo $item['Rest_Description']; ?><br>
+            <h1 style="text-align:left; color:black"><?php echo $item['Rest_Name']; ?></h1>
+            <h3 style="text-align:left; color: black"><?php echo $item['Rest_Description']; ?><br>
             <?php echo "Location: ".$item['Rest_Location']; ?><br>
             <?php echo "Address: ".$item['Rest_Address']; ?><br>
             <?php echo "Rating: ".$item['Rest_Rating']; ?><br>
@@ -128,7 +128,7 @@
                         $result2 = mysqli_query($conn, $sql2);
                         $data2 = mysqli_fetch_all($result2,MYSQLI_ASSOC);
                         foreach($data2 as $item2)
-                            echo $item2['RCat_Name'] . ",";
+                            echo $item2['RCat_Name'].", ";
                             
                     }
                 ?>
@@ -153,11 +153,11 @@
         
             <div class="div1">
         <span  class="span1"  id="img1">
-        <img src="<?php echo $item['Rep_Img'];?>" height="200px" w0idth="200px">
+        <img src="<?php echo $item['Rep_Img'];?>" height="250px" width="300px">
         </span>
         <span  class="span1" id="det">
-            <h1 style="text-align:left"><?php echo $item['Rep_Name']; ?></h1>
-            <h3 style="text-align:left"><?php echo $item['Rep_Description']; ?><br>
+            <h1 style="text-align:left; color:black"><?php echo $item['Rep_Name']; ?></h1>
+            <h3 style="text-align:left; color:black"><?php echo $item['Rep_Description']; ?><br>
             <?php echo "Location:".$item['Rep_Location']; ?><br>
             <?php echo "Address: ".$item['Rep_Address']; ?><br>
             <?php echo "Rating: ".$item['Rep_Rating']; ?><br>
@@ -171,7 +171,7 @@
                         $result2 = mysqli_query($conn, $sql2);
                         $data2 = mysqli_fetch_all($result2,MYSQLI_ASSOC);
                         foreach($data2 as $item2)
-                            echo $item2['Rep_Cat_Name'] . ",";
+                            echo $item2['Rep_Cat_Name'] . ", ";
                             
                     }
                 ?>
@@ -194,15 +194,15 @@
         ?>
         <div class="div1">
         <span  class="span1"  id="img1">
-        <img src="<?php echo $item['Hos_Image'];?>" height="200px" width="250px">
+        <img src="<?php echo $item['Hos_Image'];?>" height="250px" width="300px">
         </span>
         <span  class="span1" id="det">
-            <h1 style="text-align:left; color: #686a6b;"><?php echo $item['Hos_Name']; ?></h1>
-            <h3 style="text-align:left; color: #686a6b;"><?php echo $item['Hos_Description']; ?></br>
-            <?php echo $item['Hos_Location']; ?><br>
-            <?php echo $item['Hos_Rating']; ?><br>
-            <?php echo $item['category']; ?><br>
-            <?php echo $item['Hos_Contact']; ?></br>
+            <h1 style="text-align:left; color: black;"><?php echo $item['Hos_Name']; ?></h1>
+            <h3 style="text-align:left; color: black;"><?php echo $item['Hos_Description']; ?></br>
+            <?php echo "Location: ".$item['Hos_Location']; ?><br>
+            <?php echo "Ratings: ".$item['Hos_Rating']; ?><br>
+            <?php echo "Type: ".$item['category']; ?><br>
+            <?php echo "Contact: ".$item['Hos_Contact']; ?></br>
             <?php echo "Available Categories: "?>
                 <?php 
                     foreach($data1 as $item1)
@@ -212,7 +212,7 @@
                         $result2 = mysqli_query($conn, $sql2);
                         $data2 = mysqli_fetch_all($result2,MYSQLI_ASSOC);
                         foreach($data2 as $item2)
-                            echo $item2['cat_name'] . ",";
+                            echo $item2['cat_name'] . ", ";
                     }
                 ?>
                 </h3>
@@ -227,13 +227,14 @@
             ?>
             <div class="div1">
     <span  class="span1"  id="img1">
-      <img src="<?php echo $row['Hotel_Image'];?>" height="200px" w0idth="200px">
+      <img src="<?php echo $row['Hotel_Image'];?>" height="250px" w0idth="300px">
     </span>
     <span  class="span1" id="det">
-                <h1 style="text-align:left"><?php echo $row['Hotel_Name']; ?></h1>
-      <h3 style="text-align:left"><?php echo $row['Hotel_Description']; ?></br>
+                <h1 style="text-align:left; color:black"><?php echo $row['Hotel_Name']; ?></h1>
+      <h3 style="text-align:left; color:black"><?php echo $row['Hotel_Description']; ?></br>
       <?php echo "Location: ".$row['Hotel_Location']; ?><br>
       <?php echo "Ratings: ".$row['Hotel_Rating']; ?><br>
+      <?php echo "Type: ".$row['Hotel_StarRating']; ?></br>
       <?php echo "Price: ".$row['Hotel_PricePerNight']."Rs. per 24 hours"; ?><br>
       <?php echo "Contact: ".$row['Hotel_Contact']; ?></br>
             </h3>

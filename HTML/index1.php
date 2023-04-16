@@ -45,7 +45,7 @@
 
 .but{
   position: relative;
-  left: 2%;
+  left: 0.2%;
   border-radius: 10px 10px 10px 10px;
   border: 2px solid #c9c9c9;
 }
