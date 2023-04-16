@@ -12,11 +12,18 @@
     <script src="../JavaScript/myjavascript.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+        select{
+          width: 150px;
+          margin:10px;
+          /* height: 20px; */
+          padding:8.5px;
+          border: 2px solid #c9c9c9;
+          border-radius:10px;
+        }
         body {
             font-family: "Poppins";
             background-image: url('blur1.jpg');
-            background-repeat: repeat-y;
+            background-repeat: fixed;
             /* background-position-y: 80%; */
             /* background-position-x: -5%; */
             background-size: cover;
@@ -43,6 +50,9 @@
             margin-right: 50px;
         }
 
+        button{
+          border-radius:10px;
+        }
         #det {
             text-align:left;
         }
@@ -81,7 +91,7 @@
         <!-- <input type="text" name="category" class="form-control" id="Input" value="Hospital"> -->
         <!-- <button type="submit" class="but" name="btn" onclick="checkk()"><span id="m" class="fa fa-search"></span></button> -->
         <!-- </div> -->
-		<label for="sort">Sort by:</label>
+		<label for="sort"></label>
 		<select name="sort" id="sort" class="form-contol">
 			<option value="ratings">Ratings</option>
 			<option value="price_high">Price High to Low</option>
