@@ -98,7 +98,7 @@
 		<!-- <label for="location">Location:</label> -->
 		<!-- <input type="text" name="location" id="location"> -->
 
-      <h1 style="color:black;">Your Searched Results:</h1>
+      <h1 style="text-align:left;color:black;">Your Searched Results:</h1>
 	<?php
 		// Check if the form has been submitted
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -137,17 +137,17 @@
 				foreach($data as $row) {
 					?>
 					<div class="div1">
-        <span  class="span1"  id="img1">
-            <img src="<?php echo $row['Hotel_Image'];?>" height="200px" w0idth="200px">
-        </span>
-        <span  class="span1" id="det">
-					<h1><?php echo $row['Hotel_Name']; ?></h1>
-            <?php echo $row['Hotel_Description']; ?></br>
-            <?php echo $row['Hotel_Location']; ?><br>
-            <?php echo $row['Hotel_Rating']; ?><br>
-            <?php echo $row['Hotel_PricePerNight']; ?><br>
-            <?php echo $row['Hotel_Contact']; ?></br>
-			</h3>
+            <span  class="span1"  id="img1">
+              <img src="<?php echo $row['Hotel_Image'];?>" height="200px" w0idth="200px">
+            </span>
+            <span  class="span1" id="det">
+					    <h1 style="text-align:left"><?php echo $row['Hotel_Name']; ?></h1>
+              <h3 style="text-align:left"><?php echo $row['Hotel_Description']; ?></br>
+              <?php echo "Location: ".$row['Hotel_Location']; ?><br>
+              <?php echo "Ratings: ".$row['Hotel_Rating']; ?><br>
+              <?php echo "Price: ".$row['Hotel_PricePerNight']."Rs. per 24 hours"; ?><br>
+              <?php echo "Contact: ".$row['Hotel_Contact']; ?></br>
+			        </h3>
         </span>
     </div>
 			<?php

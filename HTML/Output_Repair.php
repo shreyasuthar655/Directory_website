@@ -88,8 +88,8 @@
         <img src="<?php echo $item['Rep_Img'];?>" height="200px" w0idth="200px">
         </span>
         <span  class="span1" id="det">
-            <h1><?php echo $item['Rep_Name']; ?></h1>
-            <?php echo $item['Rep_Description']; ?><br>
+            <h1 style="text-align:left"><?php echo $item['Rep_Name']; ?></h1>
+            <h3 style="text-align:left"><?php echo $item['Rep_Description']; ?><br>
             <?php echo "Location:".$item['Rep_Location']; ?><br>
             <?php echo "Address: ".$item['Rep_Address']; ?><br>
             <?php echo "Rating: ".$item['Rep_Rating']; ?><br>

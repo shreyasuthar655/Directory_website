@@ -54,8 +54,8 @@
         <img src="<?php echo $item['Hos_Image'];?>" height="200px" w0idth="200px">
         </span>
         <span  class="span1" id="det">
-            <h1><?php echo $item['Hos_Name']; ?></h1>
-            <?php echo $item['Hos_Description']; ?></br>
+            <h1 style="text-align:left"><?php echo $item['Hos_Name']; ?></h1>
+            <h3 style="text-align:left"><?php echo $item['Hos_Description']; ?></br>
             <?php echo $item['Hos_Location']; ?><br>
             <?php echo $item['Hos_Rating']; ?><br>
             <?php echo $item['category']; ?><br>
