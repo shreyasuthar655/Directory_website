@@ -98,7 +98,7 @@
 		<!-- <label for="location">Location:</label> -->
 		<!-- <input type="text" name="location" id="location"> -->
 
-      <h1 style="text-align:left;color:black;">Your Searched Results:</h1>
+      <h1 style="text-align:center ;color:#000000;">Your Searched Results:</h1>
 	<?php
 		// Check if the form has been submitted
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -53,7 +53,7 @@
       <p id="he"></p>
       <!-- <hr style="height: 0.1px; background-color: #ffffff; width: 100%;"> -->
       <br>
-      <h1 style="color:#686a6b;">Your Searched Results:</h1>
+      <h1 style="color:#686a6b; text-align: center;">Your Searched Results:</h1>
       <?php
     foreach($data as $item)
     {
